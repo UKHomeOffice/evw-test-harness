@@ -1,0 +1,16 @@
+{
+  "name": "evw-test-harness",
+  "version": "1.0.0",
+  "description": "a way to retest applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "evw-schemas": "^4.0.2",
+    "jsonschema": "^1.1.1"
+  }
+}

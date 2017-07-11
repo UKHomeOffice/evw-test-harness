@@ -7,6 +7,14 @@ const schema = require('evw-schemas').evw.mainForm.schema;
 const data = require('./evws/test');
 const v = new Validator();
 const log = console.log;
+const dir = (f, opts) => console.dir(f, Object.assign({}, {
+  colors: true,
+  depth: null
+}), opts);
+
+dir(schema);
+
+debugger;
 
 const validate = (data, schema) => {
   const result = v.validate(data, schema);
@@ -50,3 +58,14 @@ validation errors:`));
 };
 
 testApplication();
+
+const testing = () => {
+  return transform.transformData(data)
+  .then(transformed => {
+    return validate(transformed, schema)
+      .then(rec => Promise.resolve(data))
+      .catch(result => Promise.reject(result));
+  });
+}
+
+module.exports = testing;

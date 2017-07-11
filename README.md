@@ -9,3 +9,12 @@ npm i
 # save it to evws/test.js
 node test
 ```
+
+*generate a document udpate*
+
+```
+# check your document
+node test
+# generate an update
+node generate
+```
